@@ -4,11 +4,11 @@
 title: ANNA'S ANALYTICS
 description: "A statistics girl's guide to all things sports."
 author: Anna Fellars
-author_description: "Hey! I'm Anna and I'm a senior studying applied analytics. I've always had a passion for sports and analytics so this blog is a chance for me to combine the two things I love and share it with you!" 
+author_description: "Hey! I'm Anna and I'm a junior studying applied analytics. I've always had a passion for sports and analytics so this blog is a chance for me to combine the two things I love and share it with you!" 
 
 url: https://annafellars.github.io ## change this to https://yourusername.github.io
 baseurl: /annablog ## change this to the name of your blog repository
-header_image: /assets/img/sports_background(1).jpg ## change your header image if you want
+header_image: /assets/img/sports_background.jpg ## change your header image if you want
 
 ## Add your social media user names.  Github is required, the rest are optional
 social:
@@ -16,7 +16,7 @@ social:
     twitter: 
     facebook: 
     email: anna@fellars.com
-    linkedin: Anna Fellars
+    linkedin: https://www.linkedin.com/in/anna-fellars/
     youtube: 
     tumblr: 
     website: 

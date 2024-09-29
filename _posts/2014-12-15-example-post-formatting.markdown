@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Example Post Formatting"
-date:   2014-12-15
-description: This is a post was provided by the template to show how to format different parts of the blog post in markdown.
+title:  "Fantasy Football"
+date:   2024-10-04
+description: How-to use R to run a simple analysis to improve your fantasy football picks.
 ---
 
 <p class="intro"><span class="dropcap">C</span>urabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.</p>
