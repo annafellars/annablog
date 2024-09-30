@@ -3,7 +3,7 @@ layout: post
 title:  "Fantasy Football Statistics"
 date: 2024-09-30
 description: How to use R to run a simple analysis to improve your fantasy football picks.   
-image: "/assets/img/image5.jpg"
+image: "/assets/img/football.jpg"
 ---
 
 <p class="intro"><span class="dropcap">F</span>antasy Football is in full swing and after a hard loss to my 10-year-old cousin, I realized I needed to step up my game. Luckily, I realized I have a big advantage: I’m a statistics major! I spent the last week researching the best metrics and data sources and now I’m sharing with you how I improved my Fantasy Football team and how you can too!</p>
