@@ -16,23 +16,23 @@ To start let’s make sure we’re all on the same page for how Fantasy Football
 
 The points are made up of many different components based on a player's position. Here is how ESPN calculates the main points.
 
-![Figure]/assets/img/ff_scoring.jpg)
+![Figure](/assets/img/ff_scoring.jpg)
 
 With so many factors adding up to how points are earned, it's nearly impossible to separate the signal from the noise when predicting fantasy football along with any other sports analytics. That being said, I had to take a look for myself as the app-provided stats were leading me astray. I have broken this process down into 3 steps of how you can start your own fantasy football analysis. 
 
-## Step 1: Gather Your Data
+### Step 1: Gather Your Data
 There are many different sources on the internet to collect data, many people even have dedicated websites to collecting football stats. After researching, I decided to go with a fantasy football R package called “ffopportunity”. This package scrapes the most updated data from NFL play-by-play data and builds a data frame of Expected Fantasy Points by applying an xg-boost model.  
 
 Once I installed the “ffoportunity” package, it was easy to upload the data. The data splits into 3 tibbles, one for an overall player summary, one focused on passing yards, and the last on rushing yards. I took each one and changed it to a data frame. Here’s what the passing yards dataframe looks like. 
 
-![Figure]/assets/img/pass_plays.jpg)
+![Figure](/assets/img/pass_plays.jpg)
 
-## Step 2: Choose Your Metrics
+### Step 2: Choose Your Metrics
 The next step is separating the signal from the noise. As I mentioned before, if it was easy to predict fantasy points, there would be no point in playing. As such there are already hundreds of models and ideas for what works best. After lots and lots of research, I decided to start my analysis with air yards to keep it simple.
 
 AIR YARDS: From the multiple websites and models I looked at, air yards are always very correlated with fantasy points. Air yards measure how far the football travels in the air past the line of scrimmage - both incomplete and complete passes are included. This mostly applies to quarterbacks, but wide receivers also get a few points to their name. To look at this metric I used ggplots to created a scatterplot to get a better look. 
 
-![Figure]/assets/img/first.jpg)
+![Figure](/assets/img/first.jpg)
 
 This graph is really messy. Each point is an individual pass and there is so much data it’s hard to make anything out. I colored it by if the pass was incomplete or not in hopes that it would show a clearer trend, but as you can see it is still very messy. 
 
@@ -40,25 +40,25 @@ I knew I needed to do some data engineering to get more from this data. I decide
 
 There is also a very strong trend between complete passes and points. As straightforward as this seems, you need to choose players that have more playing time even if they aren’t as good because they will have more opportunities. In fantasy football terms “volume is king”.
 
-![Figure]/assets/img/qb_graph.jpg)
+![Figure](/assets/img/qb_graph.jpg)
 
 I next grouped my data by game to see if it was still relevant in an individual game as if you want to win a weekly match up, you need your players to do good in each game, not just in their overall season. As you can see below the trend is still there in both air yards and completed passes per game. 
 
-![Figure]/assets/img/game_graph.jpg)
+![Figure](/assets/img/game_graph.jpg)
 
 Last, although the graphs are great I wanted to be sure there is a correlation between air yards, complete passes, and expected points. I ran Kendall’s Tau Correlation Test to get actual values.
 
-![Figure]/assets/img/corr_ay.jpg)   
-![Figure]/assets/img/corr_cp.jpg)
+![Figure](/assets/img/corr_ay.jpg)   
+![Figure](/assets/img/corr_cp.jpg)
 
 Although both air yards and complete passes have a statistically significant correlation with expected points, complete passes have a much stronger correlation than air yards. This surprised me as all my prior reading told me air yards are what you want to look at.
 
-## Step 3: Apply the Analysis to Your Roster
+### Step 3: Apply the Analysis to Your Roster
 Now that I have an idea of how these metrics apply to fantasy points, it’s time to update my roster. Unfortunately since many players are already spoken for, its not as simple as finding the players with the best metrics. But I used what I learned to move players around on my roster and have a few players that I’ll be watching for future trades. Here’s how my roster ended up doing:
 
-![Figure]/assets/img/image_name.jpg)
+![Figure](/assets/img/image_name.jpg)
 
-## Conclusion
+### Conclusion
 Here is where I will finish my conclusion
 
 #### Helpful Resources
