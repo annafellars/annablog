@@ -9,9 +9,6 @@ image: "/assets/img/football.jpg"
 <p class="intro"><span class="dropcap">F</span>antasy Football is in full swing and after a hard loss to my 10-year-old cousin, I realized I needed to step up my game. Luckily, I realized I have a big advantage: I’m a statistics major! I spent the last week researching the best metrics and data sources and now I’m sharing with you how I improved my Fantasy Football team and how you can too!</p>
 
 
-![Figure]({{site.url}}/{{site.baseurl}}/assets/img/loss.jpg)
-
-
 ### How Fantasy Football Works
 
 
@@ -90,9 +87,6 @@ Overall I realized making fantasy teams is not as easy as I thought it would be.
 ##### Helpful Resources
 
 [ffopportunity](https://ffopportunity.ffverse.com/index.html) - the R package I used in this post
-
 [ffanalytics](https://fantasyfootballanalytics.net/2016/06/ffanalytics-r-package-fantasy-football-data-analysis.html) - another R package for downloading data
-
 [Air Yards](https://airyards.com/wopr.html) - a cool website that looks at Air Yard Metrics
-
 [Advanced Stats](https://www.youtube.com/watch?v=I5C7ZGA6KSA) - a youtube video of some unique stats to look at for fantasy football
