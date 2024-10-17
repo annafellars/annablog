@@ -12,10 +12,10 @@ image: "/assets/img/football.jpg"
 ### How Fantasy Football Works
 
 
-To start let’s make sure we’re all on the same page for how Fantasy Football works. I play in an ESPN league although there are several other websites you can play on. Essentially, you can have up to 17 NFL players on your roster with 9 players as your starters. Each week you are matched up with another fantasy team and as your starters play in their real-life games, they earn points for your fantasy team. At the end of the week, whichever fantasy team has the most points wins that match-up.
+To start let’s make sure we’re all on the same page for how Fantasy Football works. I play in an ESPN league, although there are several other websites you can play on. Essentially, you can have up to 17 NFL players on your roster with 9 players as your starters. Each week you are matched up with another fantasy team and as your starters play in their real-life games, they earn points for your fantasy team. At the end of the week, whichever fantasy team has the most points wins that match-up.
 
 
-The points are made up of many different components based on a player's position. Here is how ESPN calculates the main points.
+The points are made up of many different components based on a player's position. Here is how ESPN calculates the main points:
 
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/ff_scoring.jpg)
@@ -25,6 +25,8 @@ With so many factors adding up to how points are earned, it's nearly impossible 
 
 
 ### Step 1: Gather Your Data
+*You can download my code to follow along at the bottom of the page under resources*
+
 There are many different sources on the internet to collect data, many people even have dedicated websites to collecting football stats. After researching, I decided to go with a fantasy football R package called “ffopportunity”. This package scrapes the most updated data from NFL play-by-play data and builds a data frame of Expected Fantasy Points by applying an xg-boost model.  
 
 
@@ -73,7 +75,7 @@ Although both air yards and complete passes have a statistically significant cor
 
 
 ### Step 3: Apply the Analysis to Your Roster
-After my quick analysis, I had more of an idea of how these metrics apply to fantasy points, and it was time to update my roster. Unfortunately since many players were already spoken for, it wasn’t as simple as finding the players with the best metrics. But I used what I learned to move players around on my roster and I have a few players that I’ll be watching for future trades. Here’s how my team and quarterback ended up doing (not to bad if I do say so myself):
+After my quick analysis, I had more of an idea of how these metrics apply to fantasy points, and it was time to update my roster. Unfortunately since many players were already spoken for, it wasn’t as simple as finding the players with the best metrics. But I used what I learned to move players around on my roster and I have a few players that I’ll be watching for future trades. My team ended up winning and my quarterback did better than ESPN predicted!
 
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/end_results.jpg)
@@ -85,6 +87,8 @@ Overall I realized making fantasy teams is not as easy as I thought it would be.
 
 
 ##### Helpful Resources
+
+[My R Code](https://github.com/annafellars/FantasyFootball/tree/main/) - use my R code to get started!
 
 [ffopportunity](https://ffopportunity.ffverse.com/index.html) - the R package I used in this post
 
