@@ -3,7 +3,7 @@ layout: post
 title:  "PGA Analysis"
 date: 2024-09-30
 description: How to use APIs with Python to create your very own dataframe and EDA.   
-image: "/assets/img/golf.jpg"
+image: "/assets/img/golfcourse.jpg"
 ---
 
 <p class="intro"><span class="dropcap">H</span>ere’s a hot take: watching golf can be boring. I basically grew up on the golf course, but as much as I love playing the sport, sometimes it’s hard to enjoy watching it on TV. One of the reasons I love playing golf is because of how strategic and data-driven it is. During my own tournaments, I’d always carry a notebook to track my yardage, strokes, and putts. Then, I realized—maybe the key to enjoying professional golf more is getting into the data.
