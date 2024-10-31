@@ -18,6 +18,8 @@ In the following sections, I’ll provide a step-by-step guide on how I did this
 ### Step 1: Find your API
 APIs (Application Programming Interfaces) allow different programs to communicate with each other. There’s an API for almost everything—from stock exchanges, video automations, to golf! While some require a subscription, many offer free plans that are perfect for personal projects. For this blog post, I chose the [Live Golf Data](https://rapidapi.com/slashgolf/api/live-golf-data) API by SlashGolf.
 
+Each API will be different, but before you use any API you will want to make sure your uses aliegn with what the API allows. For example some APIs don't want you to publish information. By following any API's given rules you can assure that your data will be collected with good ethics. 
+
 After finding an API, sign up to receive an API key. This key authenticates you to access the data using Python. Like a password, it’s important to keep it secure—store it in a separate text file, and make sure it’s in your .gitignore file so it’s not accidentally shared.
 
 ### Step 2: Connect your API
@@ -54,6 +56,8 @@ Some other common cleaning steps might include handling missing values, identify
 Here’s what my cleaned dataframe looks like:
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/cleandataframe.jpg)
+*You can download the clean csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/clean_scoreboard_df.csv)*
+*You can also download the raw csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/raw_scoreboard_df.csv)*
 
 ### Step 5: EDA
 Now that your data is clean and ready to use you can do a simple EDA to start your analysis. An EDA allows you to get a sense of trends in your data and give you an idea of what you want to explore first. Here are 3 graphs I created and the takeaways I got from them. 
