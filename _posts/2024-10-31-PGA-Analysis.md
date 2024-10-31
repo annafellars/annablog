@@ -56,8 +56,7 @@ Some other common cleaning steps might include handling missing values, identify
 Here’s what my cleaned dataframe looks like:
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/cleandataframe.jpg)
-*You can download the clean csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/clean_scoreboard_df.csv)*
-*You can also download the raw csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/raw_scoreboard_df.csv)*
+*You can download the clean csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/clean_scoreboard_df.csv) , or the raw csv file [here](https://github.com/annafellars/GolfOlympics/blob/main/raw_scoreboard_df.csv)*
 
 ### Step 5: EDA
 Now that your data is clean and ready to use you can do a simple EDA to start your analysis. An EDA allows you to get a sense of trends in your data and give you an idea of what you want to explore first. Here are 3 graphs I created and the takeaways I got from them. 
