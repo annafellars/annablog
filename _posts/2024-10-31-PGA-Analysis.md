@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "PGA Data Analysis"
-date: 2024-09-30
-description: How to use APIs with Python to create your very own dataframe and EDA.   
+title:  "Charting the Course"
+date: 2024-10-31
+description: Gaining insights into the PGA with Python and APIs   
 image: "/assets/img/golfcourse.jpg"
 ---
 
@@ -18,7 +18,8 @@ In the following sections, I’ll provide a step-by-step guide on how I did this
 ### Step 1: Find your API
 APIs (Application Programming Interfaces) allow different programs to communicate with each other. There’s an API for almost everything—from stock exchanges, video automations, to golf! While some require a subscription, many offer free plans that are perfect for personal projects. For this blog post, I chose the [Live Golf Data](https://rapidapi.com/slashgolf/api/live-golf-data) API by SlashGolf.
 
-Each API is unique, so before using one, ensure that your intended uses align with its terms. For example, some APIs prohibit publishing certain information. By following an API's guidelines, you can ensure that your data collection remains ethical.
+#### Ethics Note
+Each API is unique, so before using one, ensure that your intended uses align with its terms.For example, some APIs prohibit publishing certain information or have limits to how often you can extract data. You can often find if an API has any special terms by checking the documentation or looking at the pricing plans. By following an API's guidelines, you can ensure that your data collection remains ethical. 
 
 After finding an API, sign up to receive an API key. This key authenticates you to access the data using Python. Like a password, it’s important to keep it secure—store it in a separate text file, and make sure it’s in your .gitignore file so it’s not accidentally shared.
 
@@ -27,7 +28,7 @@ After finding an API, sign up to receive an API key. This key authenticates you 
 
 Once you’ve chosen an API, open a Python file and import the requests library, which lets you connect to your API and retrieve data. Next, read in your API key and the API URL. This is where it can get a bit tricky, as each API has different endpoints and parameters that allow you to specify the data you want.
 
-For example, the Live Golf Data API has endpoints for players, earnings, scoreboards, tournaments, and more. I selected the leaderboard endpoint, which required parameters for the year and tournament I wanted to analyze. Many APIs offer a demo where you can test different endpoints and parameters to see what outputs you’ll receive. After selecting the parameters, you can often copy code directly from the demo to start your project. This setup will allow you to pull data directly from your chosen API into your Python environment.
+For example, the Live Golf Data API has endpoints for players, earnings, scoreboards, tournaments, and more. I selected the leaderboard endpoint, which required parameters for the year and tournament I wanted to analyze. Many APIs offer a demo where you can test different endpoints and parameters to see what outputs you’ll receive. After selecting the parameters, you can often copy code directly from the demo to start your project. This setup will allow you to pull data directly from your chosen API into your Python environment. Here's an example request from the [Live Golf Data Documentation](https://rapidapi.com/slashgolf/api/live-golf-data/playground/apiendpoint_8a041a6a-98bc-4ed2-95af-4dcdb76f7c66):
 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/requests.jpg)
 Here’s a breakdown of the key components in this code:
