@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Charting the Course"
-date: 2024-10-31
+date: 2024-11-10
 description: Gaining insights into the PGA with Python and APIs   
 image: "/assets/img/golfcourse.jpg"
 ---
