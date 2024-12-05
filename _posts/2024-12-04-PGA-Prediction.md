@@ -3,9 +3,9 @@ layout: post
 title:  "PGA Predictions"
 date: 2024-12-04
 description: Using machine learning to predict final tournament rankings within the PGA 
-image: "/assets/img/golfcourse.jpg"
+image: "/assets/img/newgolf.jpg"
 ---
-<span class="dropcap">I</span>n my [last blog post](https://annafellars.github.io/annablog/blog/PGA-Analysis/), we used an API to gather data on the 2024 PGA Major Tournaments and conducted a basic exploratory data analysis (EDA). After the last post, I proudly showed my dad but he was less impressed and said something along the lines of, "That’s it? I thought you were a stats major—these are just graphs!" So, for my dad (and anyone else wanting more), this post dives deeper into a PGA statistical analysis, featuring machine learning models and an interactive Streamlit app.
+<span class="dropcap">I</span>n my [last blog post](https://annafellars.github.io/annablog/blog/PGA-Analysis/), I used an API to gather data on the 2024 PGA Major Tournaments and conducted a basic exploratory data analysis (EDA). After the last post, I proudly showed my dad but he was less impressed and said something along the lines of, "That’s it? I thought you were a stats major—these are just graphs!" So, for my dad (and anyone else wanting more), this post dives deeper into a PGA statistical analysis, featuring machine learning models and an interactive Streamlit app.
 
 ### Questions of Interest
 Reflecting on the EDA from my previous post, one graph stood out: Daily Averages across Tournaments. There was lots of variation between each day/round and it led me to wonder how much a player’s position in rankings changed throughout a tournament. I decided I would dive deeper into these by answering the following questions:
@@ -13,7 +13,7 @@ Reflecting on the EDA from my previous post, one graph stood out: Daily Averages
 1. Is there a correlation between a player’s position in earlier rounds and their final position?
 2. Can we predict a player’s final position based on their performance in the first three rounds?
 
-#### #1 Correlation
+### #1 Correlation
 *follow along with my [code](https://github.com/annafellars/GolfAPI/blob/main/README.md)*
 
 If you remember from my previous post, there weren't any variables for position after each round. So I created new features by calculating cumulative scores after each round and ranking players accordingly. Then I cleaned up the data to get a dataframe with the positions after each round and the final position.
@@ -22,19 +22,20 @@ If you remember from my previous post, there weren't any variables for position 
 
 Next, I plotted a correlation matrix to visualize relationships between these positions. Darker colors and values closer to 1 indicate stronger correlations. 
 
-![Figure]({{site.url}}/{{site.baseurl}}/assets/img/corrplot.jpg)
+![Figure]({{site.url}}/{{site.baseurl}}/assets/img/corr2.jpg)
 
 The matrix shows that a player's final position becomes increasingly determined as a tournament progresses. Unsurprisingly, positions in later rounds have stronger correlations with the final position. This suggests players with consistent performance early on tend to maintain their rankings. Knowing these correlations exist, the next logical step was to see if we could predict a player’s final position before the last round.
 
-#### #2 Predicting Final Rankings
+### #2 Predicting Final Rankings
 To answer this, I built four machine-learning models using two datasets:
 - Basic Dataframe: Positions by round and the final position.
-- Enhanced Dataframe: Includes interaction terms, player and course dummy variables, and positional changes across rounds.
+- Enhanced Dataframe: Includes interaction terms, player and course dummy variables, and difference in ranking between rounds.
 
-##### Penalized Linear Regression
+#### Penalized Linear Regression
 Given the linear trends in the data, I started with penalized linear regression. I evaluated model performance using R², a metric indicating how well the model explains variability in the data. An R² value closer to 1 indicates that the model better captures the relationship between the predictors and the target variable, suggesting good predictive performance on the data. 
 - Basic Model R²: 0.78
 - Enhanced Model R²: 0.73
+
 The basic model performed better, likely because the added complexity introduced noise without sufficient new information. Below are the prediction vs. actual plots:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -42,10 +43,11 @@ The basic model performed better, likely because the added complexity introduced
   <img src="{{site.url}}/{{site.baseurl}}/assets/img/linearupgradejpg.jpg" alt="Figure 2" style="width:45%;">
 </div>
 
-##### Random Forest
+#### Random Forest
 Random forest, while often better suited for non-linear data, provides another perspective. Using the same datasets, I evaluated these models using R²:
 - Basic Model R²: 0.75
 - Enhanced Model R²: 0.76
+
 Both models performed similarly, but the enhanced model slightly edged out the basic one. I also found that the most influential feature in predicting was the third round position, which aligns with our earlier correlation findings. Below are the prediction vs. actual plots:
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
