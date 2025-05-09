@@ -20,24 +20,29 @@ I used the tidymodels package in R to create a recipe for cleaning the data. Pre
 ### Comparing models
 
 I trained four different regression models, then averaged their predictions to get a final ranking. I used tidymodels, which makes everything super straightforward.
+
 *[my code](https://github.com/annafellars/NBAplayoffs)*
 
 #### Boosted Forest
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_boost.jpg)
 
 Here are the results for the boosted forest model (with 1 = most likely to win). According to ChatGPT, the Thunder are the current favorites so it's interesting that this model had them doing the worst.
 
 #### Linear Regression
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_linreg.jpg)
 
 You can't do a regression problem without trying a simple lm model, right? These results also have the Thunder not doing as well, but I could get behind the Nuggets winning. Since I'm a Jazz fan, I don't really care who wins, but I just feel in my soul that the Nuggets could make it happen. 
 
 #### SVM 
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_svm.jpg)
 
 I’m not usually an SVM fan, but I figured why not? Surprisingly, it gave the exact same order as the linear regression model. So either I did something very right… or very wrong.
 
-#### Nueral Network
+#### Neural Network
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_nn.jpg)
 
 I know "neural network" sounds intense, but with bag_mlp() in tidymodels, I threw together a super simple single-layer model. For more complex problems, I’d use something deeper, but for this it was a fun experiment. These results varied a bit, but overall the same teams floated to the top across all models.
