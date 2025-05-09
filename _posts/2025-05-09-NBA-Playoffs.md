@@ -24,18 +24,22 @@ I trained four different regression models, then averaged their predictions to g
 
 #### Boosted Forest
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_boost.jpg)
+
 Here are the results for the boosted forest model (with 1 = most likely to win). According to ChatGPT, the Thunder are the current favorites so it's interesting that this model had them doing the worst.
 
 #### Linear Regression
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_linreg.jpg)
+
 You can't do a regression problem without trying a simple lm model, right? These results also have the Thunder not doing as well, but I could get behind the Nuggets winning. Since I'm a Jazz fan, I don't really care who wins, but I just feel in my soul that the Nuggets could make it happen. 
 
 #### SVM 
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_svm.jpg)
+
 I’m not usually an SVM fan, but I figured why not? Surprisingly, it gave the exact same order as the linear regression model. So either I did something very right… or very wrong.
 
 #### Nueral Network
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_nn.jpg)
+
 I know "neural network" sounds intense, but with bag_mlp() in tidymodels, I threw together a super simple single-layer model. For more complex problems, I’d use something deeper, but for this it was a fun experiment. These results varied a bit, but overall the same teams floated to the top across all models.
 
 
@@ -43,9 +47,11 @@ I know "neural network" sounds intense, but with bag_mlp() in tidymodels, I thre
 So I know I could've stacked these models or tuned them more to get a super powerful final prediction, but I wanted the results fast before any more games were played so I just used dpylr to combine the predictions into one table, then get the average prediction. 
 
 Here are the final results:
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_overall.jpg)
 
 Once I had these rankings I could use them to complete my bracket to look like this:
+
 ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/nba_Bracket.jpg)
 
 I'll be honest, I'm not sure how much faith I have in these results but it's always fun to mess around with data. It will be fun to see if I get any of my predictions right from this simple machine learning project. I've never considered myself a Cavaliers fan, but I have to cheer for them now! Overall if I did this again I would collect more data and do more feature engineering, and tune my models. I think there is definetly potential with this set up and the models I selected if I went deeper into this project. 
