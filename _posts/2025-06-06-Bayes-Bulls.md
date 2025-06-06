@@ -3,7 +3,7 @@ layout: post
 title:  "Bayes' Bulls"
 date: 2025-06-06
 description: Using Bayesian Methods to Understand Professional Bull Riders
-image: "/assets/img/bullridephoto.jpg"
+image: "/assets/img/bullridepic.jpg"
 ---
 
 <p class="intro"><span class="dropcap">O</span>kay so I am definietly not a cowgirl, but as soon as summer hits, I start dreaming about driving with the windows down, blasting country music. I’ve been to a few rodeos and always have a great time, but I know nothing about rodeo sports. I came across some bull riding data on GitHub and thought, “Why not?” So here’s me, learning how bull riding actually works and doing a quick Bayesian analysis.</p>
@@ -12,13 +12,14 @@ image: "/assets/img/bullridephoto.jpg"
 
 For those of you who are like me and know nothing about bull riding, here's the gist of the sport and the scoring:
 
-<iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/ZSNnK14uRGE" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-</iframe>
-
+<div style="text-align: center;">
+  <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/ZSNnK14uRGE" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 
 ### Data
@@ -41,7 +42,7 @@ At first, I kept getting errors when running the model. After some trial and err
 
 Once I ran the model and checked all the diagnostics, I got posterior draws and confidence intervals for each rider. Below are the 20 riders with the highest posterior mean success percentages. You’ll notice that the posterior means are just a few percentage points off from each rider’s observed season percentages. This is because I used uninformative priors, so the model mostly learns from the data.
 
-![Figure]({{site.url}}/{{site.baseurl}}/assets/img/bullrideplot.jpg)
+![Figure]({{site.url}}/{{site.baseurl}}/assets/img/bullrideplot.jpeg)
 
 By looking at the 95% confidence intervals we see that there is no rider that is significantly different from the other. Meaning that there isn't a rider that is significantly better or worse at staying on the bull, if more there was another rodeo the rankings could easily change. The riders with wider intervals have less data so there is more uncertainty. If we added data from other seasons we could really dial in on what the percentages are and get more insight into if riders are really different from one another.
 
