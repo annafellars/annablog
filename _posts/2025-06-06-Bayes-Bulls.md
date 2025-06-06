@@ -30,7 +30,7 @@ I got my data from the [2023 Unlease the Beast league](https://azcms.pbr.com/sta
 
 That made me wonder: how much variation is there between riders? Are any of these metrics actually significant, or is this just the normal variance of the sport? I decided to start by looking at the % Ridden metric or Rides/Outs.
 
-#### Bayesian Analysis
+### Bayesian Analysis
 
 I chose to use Nimble in R to run a Bayesian analysis with a binomial likelihood and a beta prior. Since some riders had very few attempts this season, I used a hierarchical model. This allows riders with limited data to “borrow strength” from the overall distribution, pulling them toward the group mean. While riders with more data are mostly influenced by their own performance. I used fairly uninformative priors, since I still don’t know a lot about bull riding.
 
