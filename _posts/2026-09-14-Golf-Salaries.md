@@ -55,7 +55,7 @@ We took the same idea one step further with Top 25 / Cuts. Making the cut is gre
 #### Cost vs Consistency
 At the end of the day, we still had a budget to work with. This feature helped us find the sleepers: golfers who were relatively inexpensive but consistently made cuts throughout the season.This was probably one of the most useful features we created because fantasy golf isn't just about finding good golfers. It's about finding good golfers who are worth what you're paying for them.
 
-#### Results
+### Results
 We used these features along with our own intuition to make our final decisions. Looking back at the season, I'm happy to say that some of our best picks weren't chosen because of something we read on ESPN. They were chosen because the numbers made them interesting. Pierceson Coody, for example, was relatively cheap but had a high cut rate, making him exactly the kind of player we were looking for. He ended up being a great value pick that not many other teams had. Chris Gotterup was another example. He looked extremely undervalued based on the features we created, and he ended up winning three tournaments throughout the year.
 
 Obviously, this doesn't mean our ratios predicted those wins. But they did exactly what we needed them to do: they helped us find players worth investigating that might have been overlooked by simply looking at rankings or salaries. 
