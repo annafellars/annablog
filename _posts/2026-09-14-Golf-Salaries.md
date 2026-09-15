@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to create a blog post"
+title:  "How I Became the Problem in My Grandpa's Fantasy Golf League"
 date: 26-09-14
 description: Using data cleaning, feature engineering, and a little golf knowledge to take on my grandpa's fantasy golf league. 
 image: "/assets/img/pgatrophy.jpeg"
